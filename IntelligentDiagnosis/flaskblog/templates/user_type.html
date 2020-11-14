@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action=""> <!-- action posts the information onto the same route we are currently on -->
+            {{ form.hidden_tag() }} <!-- adding a CSRF (cross site request forgery) token to protect our form against certain attacks -->
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">User Type</legend>
+                {{ form.user_type(class="form-control form-control-lg") }}
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

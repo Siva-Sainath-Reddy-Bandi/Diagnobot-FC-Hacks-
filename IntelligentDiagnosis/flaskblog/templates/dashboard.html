@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">Anish G.</a>
+                <!-- as date_posted is a datetime object, it's strftime() method can be used to display only date -->
+                <small class="text-muted">11/15/2020 1.01 AM</small>
+            </div>
+            <!-- when the title of the post is clicked, the user is sent to a separate tab where the post can be
+            updated and/or deleted. the post_id parameter we are passing is the post's id attribute -->
+{#                <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>#}
+            <p class="article-content">Dry Cough, Fever, Heavy Chest Pain, Occasional numbing of hands</p>
+        </div>
+    </article> <!-- article block code snippet -->
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">Siva B.</a>
+                <!-- as date_posted is a datetime object, it's strftime() method can be used to display only date -->
+                <small class="text-muted">11/14/2020 12.03 PM</small>
+            </div>
+            <!-- when the title of the post is clicked, the user is sent to a separate tab where the post can be
+            updated and/or deleted. the post_id parameter we are passing is the post's id attribute -->
+{#                <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>#}
+            <p class="article-content">Shortness of Breath, Chest Pain, Body Ache, Moderately High Temperature</p>
+        </div>
+    </article> <!-- article block code snippet -->
+{% endblock content %}
